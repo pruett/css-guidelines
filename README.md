@@ -50,7 +50,7 @@ A component is a cohesive group of markup that combines to create a functional p
 
 ```css
 /* format */
-.ComponentName
+.ComponentName {}
 
 /* example */
 .GlobalFooter { padding: 2rem 5%; }
