@@ -35,35 +35,35 @@ Modifiers provide additional styling to an already-defined class. They cannot st
 .u_headline.-showtime { text-transform: uppercase; }
 ```
 
+Example HTML snippet:
+
+```html
+<h2 class"u_headline -showtime">It&rsquo;s showtime!</h2>
+```
+
 **Note:** Since `.-showtime` is defined as a modifier of `.u_headline`, we can still define another `.-showtime` modifier on another class if the situation should arise down the road.
 
 
 ### Components
 
-A component is a cohesive group of markup that combines to create a functional piece of the UI. **Components are denoted with a `c_` and a Pascal-cased name**. Preferably this name is comprised of more than one word. For example, instead of `.c_Searchbar`, try `.c_SearchBar`. This name is then used to namespace its descendents.   
+A component is a cohesive group of markup that combines to create a functional piece of the UI. **Components are denoted with a Pascal-cased name**. Preferably this name is comprised of more than one word. For example, instead of `Searchbar`, try `SearchBar`. This name is used to namespace its descendants. **Descendant class names are prefixed with the name of the component. (i.e. component: SearchBar -- descendants: sb-classname)**
 
 ```css
 /* format */
-.c_ComponentName
+.ComponentName
 
 /* example */
-.c_GlobalFooter { padding: 2rem 5%; }
-/* we use the prefix 'gf' from GlobalFooter to namespace its descendents */
-.gf-title { text-transform: uppercase; }
+.GlobalFooter { padding: 2rem 5%; }
+/* we use the prefix 'gf' from GlobalFooter to namespace its descendants */
+.gf-title { color: red; }
 .gf-logo { float: left; }
 ```
 
 An example HTML snippet could look like the following:
 
 ```html
-<html>
-  <head><title>Title</title></head>
-  <body>
-    <h1>Hello World!</h1>
-    <footer class="c_GlobalFooter">
-      <h6 class="gf-title.u_centered">Footer</h6>
-      <img src="/path/to/logo" class="gf-logo">
-    </footer>
-  </body>
-</html>
+<footer class="GlobalFooter">
+  <h6 class="gf-title u_headline -showtime">footer</h6>
+  <img src="/path/to/logo" class="gf-logo">
+</footer>
 ```
