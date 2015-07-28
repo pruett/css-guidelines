@@ -53,6 +53,7 @@ Example HTML snippet:
 
 **Note:** Since `.-showtime` is defined as a modifier of `.title`, we can still define another `.-showtime` modifier on another class without clobbering styles. This reinforces the notion that modifiers are dependent, relying on some preceding style declarations.
 
+**Caveat/Edge Case:** There does exist an unfortunate edge case in which multiple classes could each define their own modifier of the same name. **AND**, for some unlikely reason, both the classes are used together on the same element, the modifier will be applied to both classes, when perhaps the author intended it to be applied to a single class.
 
 ### Components
 
