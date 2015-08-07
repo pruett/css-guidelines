@@ -8,12 +8,15 @@ This styleguide has been inspired by the following:
 - [SUITCSS](https://suitcss.github.io/)
 - [RSCSS](https://github.com/rstacruz/rscss)
 
+## The Future
+
+I would like to explore the area of js powered css, particularly [css-modules](https://github.com/css-modules/css-modules) in which css is finally modular and composable! The following rules are likely to evolve as this becomes a more stable part of the workflow, eliminating the need for namespaceing etc. In the meatime, these are a set of rules that I have latched on to. 
+
 ## Some loose rules during exploration
 
 - Avoid nested rules unless defining a modifier; try to keep your stylesheets as flat as possible as to avoid cascading issues. There may be certain circumstances where nesting may prove useful (we'll explore this)
 - Do not use IDs to style elements, only classes. Following this combats specificity issues.
 - Do not style naked element tags (i.e. `p`, `ul`) unless used for styling baseline layout setup. If not, use classes.
-
 
 ### Utilities
 
